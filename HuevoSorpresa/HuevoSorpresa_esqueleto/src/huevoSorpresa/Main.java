@@ -3,27 +3,42 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package huevoSorpresa;
-
 /**
- *
- * @author Profesor
+* Clase main del programa, que define un objeto huevoSorpresa con unos parámetros 
+y realiza
+* acciones de aumentar el precio de venta de un huevo sorpresa y sacar un número de huevos sorpresa. 
+* 
+ * @author LauraRosaGarcia
  */
 public class Main {
 
     /**
-     * @param args the command line arguments
+     * Método main
+     * 
+     * Este método crea un nuevo objeto HuevoSorpresa
+     * @param args
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         HuevoSorpresaRosaGarciaLaura2122 h_sorpresa;
-       
-        
         h_sorpresa=new HuevoSorpresaRosaGarciaLaura2122(10,5,"peluche",10);
         opera_PrecioRosaGarciaLaura2122(h_sorpresa);
         
         opera_UnidadesRosaGarciaLaura2122(h_sorpresa);
         
     }
+    
+    /**
+     * Método opera_UnidadesRosaGarciaLaura2122.
+     * 
+     * En este método se intentará sacar dos huevos sorpresa
+     * como la idea es que no hay dinero va a saltar la excepción 
+     * y no se modificará el número de unidades de la tienda
+     * 
+     * @param h_sorpresa objeto HuevoSorpresa que se quiere sacar
+     * @throws exception si no se tiene dinero suficiente para pagar los huevos sorpresa
+     * o no hay suficientes unidadaes en tienda.
+     * 
+     */
 
     private static void opera_UnidadesRosaGarciaLaura2122(HuevoSorpresaRosaGarciaLaura2122 h_sorpresa) {
         /*Vamos a intentar sacar 2 huevos sorpresa, como no hay dinero suficiente saltará
@@ -37,6 +52,17 @@ public class Main {
             
         }
     }
+    
+    /**
+     * Método opera_PrecioRosaGarciaLaura2122
+     * 
+     * En este método se va a intentar subir el precio tres euros
+     * 
+     * Como el máximo de precio está en diez euros, la operación tendra éxito y pasará a valer ocho euros.
+     * 
+     * @param h_sorpresa objeto HuevoSorpresa que va a aumentar de precio
+     * @throws exception si la cantidad  a aumentar  supera el precio máximo
+     */
 
     private static void opera_PrecioRosaGarciaLaura2122(HuevoSorpresaRosaGarciaLaura2122 h_sorpresa) {
         /*Vamos a aumentar el precio 3€, como no supera el precio máximo establecido la operación
